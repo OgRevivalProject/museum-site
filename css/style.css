@@ -1,83 +1,3 @@
-body.home-page {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    background-image: url('../images/background.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-.top-field {
-    background-color: rgba(74, 78, 105, 0.85);
-    color: #f2e9e4;
-    text-align: center;
-    padding: 25px 20px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-}
-
-.top-field h1 {
-    margin: 0 0 10px 0;
-    font-size: 2rem;
-}
-
-.top-field nav button {
-    margin: 5px;
-    padding: 12px 25px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    background-color: #9a8c98;
-    color: #f2e9e4;
-    transition: background-color 0.3s;
-}
-
-.top-field nav button:hover {
-    background-color: #c9ada7;
-}
-
-.three-columns {
-    display: flex;
-    justify-content: space-around;
-    margin: 30px 20px;
-    gap: 20px;
-    background-color: rgba(255, 255, 255, 0.85);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.three-columns .column {
-    flex: 1;
-    text-align: center;
-}
-
-.three-columns .column img {
-    width: 100%;
-    border-radius: 6px;
-    margin-bottom: 10px;
-}
-
-.three-columns .column h2 {
-    margin: 10px 0 5px;
-}
-
-.three-columns .column p {
-    color: #555;
-}
-
-.bottom-field {
-    background-color: rgba(34, 34, 59, 0.9);
-    color: #f2e9e4;
-    text-align: center;
-    padding: 20px;
-    margin-top: 30px;
-    font-size: 0.95rem;
-    box-shadow: 0 -4px 6px rgba(0,0,0,0.2);
-}
-
 .staff-page {
     max-width: 1100px;
     margin: 40px auto;
@@ -86,7 +6,7 @@ body.home-page {
 
 .staff-block {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 40px;
     margin-bottom: 60px;
 }
@@ -98,6 +18,8 @@ body.home-page {
 .staff-block img {
     width: 38%;
     border-radius: 10px;
+    object-fit: cover;
+    height: 100%; /* ensures square images fill the block */
 }
 
 .staff-info {
