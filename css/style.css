@@ -77,3 +77,44 @@ body.home-page {
     font-size: 0.95rem;
     box-shadow: 0 -4px 6px rgba(0,0,0,0.2);
 }
+
+.staff-page {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.staff-block {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.staff-block.reverse {
+    flex-direction: row-reverse;
+}
+
+.staff-block img {
+    width: 38%;
+    border-radius: 10px;
+}
+
+.staff-info {
+    width: 62%;
+}
+
+.staff-info h2 {
+    margin-bottom: 5px;
+}
+
+.staff-info h3 {
+    margin-top: 0;
+    color: #555;
+    font-weight: normal;
+}
+
+.staff-info p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
