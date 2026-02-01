@@ -1,1 +1,84 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f4f0;
+  color: #333;
+}
+
+/* Top Header */
+.top-field {
+  background-color: #4a4e69;
+  color: #f2e9e4;
+  padding: 25px 20px;
+  text-align: center;
+}
+
+.top-field h1 {
+  margin: 0 0 10px 0;
+  font-size: 2.2rem;
+}
+
+.top-field nav button {
+  margin: 5px;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #9a8c98;
+  color: #f2e9e4;
+  transition: background-color 0.3s ease;
+}
+
+.top-field nav button:hover {
+  background-color: #c9ada7;
+}
+
+/* Three Columns Layout */
+.three-columns {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 20px;
+  gap: 20px;
+}
+
+.three-columns .column {
+  background-color: #fff;
+  flex: 1;
+  text-align: center;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.three-columns .column img {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+/* Column Titles */
+.three-columns .column h2 {
+  margin: 10px 0 5px;
+  font-size: 1.5rem;
+}
+
+/* Column Descriptions */
+.three-columns .column p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Footer */
+.bottom-field {
+  background-color: #22223b;
+  color: #f2e9e4;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+  font-size: 0.95rem;
+}
 /* CSS placeholder */ body { font-family: Arial; }
