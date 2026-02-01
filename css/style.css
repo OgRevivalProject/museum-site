@@ -1,3 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f7f2;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+body.home {
+    background: url('../images/background.png') no-repeat center center;
+    background-size: cover;
+}
+
+.top-field {
+    background-color: #4a4e69;
+    color: #f2e9e4;
+    padding: 20px;
+    text-align: center;
+}
+
+.top-field nav button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #9a8c98;
+    color: #f2e9e4;
+}
+
+.top-field nav button:hover {
+    background-color: #c9ada7;
+}
+
+.three-columns {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+    gap: 15px;
+}
+
+.three-columns section {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    flex: 1;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.three-columns img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
 .staff-page {
     max-width: 1100px;
     margin: 40px auto;
@@ -19,7 +83,7 @@
     width: 38%;
     border-radius: 10px;
     object-fit: cover;
-    height: 100%; /* ensures square images fill the block */
+    height: 100%;
 }
 
 .staff-info {
@@ -39,4 +103,39 @@
 .staff-info p {
     line-height: 1.6;
     margin-bottom: 10px;
+}
+
+.collections-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 40px 0;
+}
+
+.collections-nav button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #9a8c98;
+    color: #f2e9e4;
+}
+
+.collections-nav button:hover {
+    background-color: #c9ada7;
+}
+
+.collections-nav p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.bottom-field {
+    background-color: #22223b;
+    color: #f2e9e4;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
 }
