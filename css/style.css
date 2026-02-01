@@ -16,7 +16,7 @@ button {
 }
 
 body.home {
-    background: url('../images/background.png') no-repeat center center;
+    background: url('/images/background.png') no-repeat center center;
     background-size: cover;
 }
 
