@@ -1,4 +1,4 @@
-/* Reset some default styles and set base font/color */
+/* --- Global Styles --- */
 body {
     font-family: Arial, sans-serif;
     background-color: #f8f7f2;
@@ -7,24 +7,21 @@ body {
     color: #333;
 }
 
-/* Make links inherit color and remove underline */
 a {
     text-decoration: none;
     color: inherit;
 }
 
-/* Give all buttons a pointer cursor for usability */
 button {
     cursor: pointer;
 }
 
-/* Home page specific background image */
 body.home {
     background: url('/images/background.png') no-repeat center center;
     background-size: cover;
 }
 
-/* Top header bar styling */
+/* --- Header --- */
 .top-field {
     background-color: #4a4e69;
     color: #f2e9e4;
@@ -32,7 +29,6 @@ body.home {
     text-align: center;
 }
 
-/* Buttons inside top nav */
 .top-field nav button {
     margin: 5px;
     padding: 10px 20px;
@@ -43,12 +39,11 @@ body.home {
     color: #f2e9e4;
 }
 
-/* Hover effect for nav buttons */
 .top-field nav button:hover {
     background-color: #c9ada7;
 }
 
-/* Layout for 3 columns on the home page */
+/* --- Main Homepage Sections --- */
 .three-columns {
     display: flex;
     justify-content: space-around;
@@ -56,7 +51,6 @@ body.home {
     gap: 15px;
 }
 
-/* Individual section styling inside 3 columns */
 .three-columns section {
     background-color: rgba(255, 255, 255, 0.9);
     padding: 15px;
@@ -66,20 +60,18 @@ body.home {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Images inside columns should resize nicely */
 .three-columns img {
     max-width: 100%;
     border-radius: 5px;
 }
 
-/* Staff page wrapper */
+/* --- Staff Page --- */
 .staff-page {
     max-width: 1100px;
     margin: 40px auto;
     padding: 0 20px;
 }
 
-/* Each staff member block */
 .staff-block {
     display: flex;
     align-items: flex-start;
@@ -87,12 +79,10 @@ body.home {
     margin-bottom: 60px;
 }
 
-/* Reverse layout if needed */
 .staff-block.reverse {
     flex-direction: row-reverse;
 }
 
-/* Staff photos styling */
 .staff-block img {
     width: 38%;
     border-radius: 10px;
@@ -100,12 +90,10 @@ body.home {
     height: 100%;
 }
 
-/* Staff text container */
 .staff-info {
     width: 62%;
 }
 
-/* Staff headings */
 .staff-info h2 {
     margin-bottom: 5px;
 }
@@ -116,23 +104,17 @@ body.home {
     font-weight: normal;
 }
 
-/* Paragraph spacing in staff info */
 .staff-info p {
     line-height: 1.6;
     margin-bottom: 10px;
 }
 
-/* Collections nav container */
-.collections-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin: 40px 0;
+/* --- Collections Navigation --- */
+.collections-nav {
+    text-align: center;
+    margin-top: 30px;
 }
 
-/* Collections nav buttons */
 .collections-nav button {
     padding: 10px 20px;
     font-size: 1rem;
@@ -140,24 +122,93 @@ body.home {
     border: none;
     background-color: #9a8c98;
     color: #f2e9e4;
+    margin: 5px;
 }
 
-/* Hover effect for collection nav buttons */
 .collections-nav button:hover {
     background-color: #c9ada7;
 }
 
-/* Paragraph under collections nav for info */
 .collections-nav p {
-    text-align: center;
-    margin-top: 20px;
+    margin-top: 15px;
+    font-style: italic;
+    color: #555;
 }
 
-/* Footer styling */
+/* --- Collections Sections --- */
+.collection-section {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.collection-category h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #4a4e69;
+}
+
+/* Artifact layout */
+.artifact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.artifact img {
+    flex: 1 1 40%;
+    max-width: 40%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.artifact-metadata {
+    flex: 1 1 55%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.artifact-metadata p {
+    margin: 3px 0;
+    line-height: 1.4;
+}
+
+.artifact-metadata .label {
+    font-weight: bold;
+}
+
+/* Divider between artifacts */
+.artifact-divider {
+    height: 2px;
+    background-color: #ccc;
+    margin: 20px 0;
+}
+
+/* --- Footer --- */
 .bottom-field {
     background-color: #22223b;
     color: #f2e9e4;
     text-align: center;
     padding: 15px;
     margin-top: 20px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+    .artifact {
+        flex-direction: column;
+    }
+    .artifact img, .artifact-metadata {
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
+    .three-columns {
+        flex-direction: column;
+    }
 }
