@@ -3,173 +3,215 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="noindex, nofollow">
 <meta name="author" content="Shane R.">
-<title>Fictitious Museum Collections</title>
+<meta name="robots" content="noindex, nofollow">
+<title>Museum of Cultural Memory - Collections</title>
 <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
+<body class="collections-page">
 
 <header class="top-field">
-    <h1>Fictitious Museum</h1>
-    <nav>
+    <h1>Museum of Cultural Memory</h1>
+    <nav class="main-nav">
+        <button onclick="location.href='../index.html'">Home</button>
         <button onclick="location.href='staff.html'">Staff</button>
         <button onclick="location.href='collections.html'">Collections</button>
+        <button onclick="location.href='login.html'">Login</button>
     </nav>
 </header>
 
-<!-- Navigation for Archeology and Anthropology -->
+<!-- Collections Sub-navigation -->
 <div class="collections-nav">
-    <button onclick="showSection('archeology')">Archeology</button>
+    <button onclick="showSection('archaeology')">Archaeology</button>
     <button onclick="showSection('anthropology')">Anthropology</button>
-    <p>The content in this gallery was entirely created by AI under human direction. It was then curated, reviewed and edited by a human before being published.</p>
+    <button onclick="showSection('histories')">Histories</button>
+    <p><em>The content in this gallery was entirely created by AI under human direction. It was then curated, reviewed and edited by a human before being published.</em></p>
 </div>
 
-<!-- Archeology Section -->
-<section id="archeology" class="collection-section">
-    <div class="collection-category">
-        <h1>Archeology Artifacts</h1>
-    </div>
+<main>
+
+<!-- Archaeology Section -->
+<section id="archaeology" class="collection-section">
+    <h1>Archaeology</h1>
 
     <!-- Artifact 1 -->
-    <div class="artifact">
-        <img src="../images/collections/obsidian_spearhead.png" alt="Obsidian spearhead">
-        <div class="artifact-metadata">
-            <p><span class="label">Name:</span> Obsidian Spearhead</p>
-            <p><span class="label">Material:</span> Obsidian and wood</p>
-            <p><span class="label">Size/Weight/Shape:</span> 15 cm length, tapered triangular blade</p>
-            <p><span class="label">Estimated Age:</span> ~2500 BCE</p>
-            <p><span class="label">Preservation State:</span> Partially preserved; wood degraded</p>
-            <p><span class="label">Location Found:</span> Burial site, Central Europe, coordinates 48.2N, 16.3E</p>
-            <p><span class="label">Likely Purpose:</span> Hunting weapon</p>
-            <p><span class="label">Evidence of Use:</span> Minor wear along edges, residue of animal blood</p>
-            <p><span class="label">Manufacture Clues:</span> Flaked carefully with pressure technique, hafted into wood shaft</p>
-            <p><span class="label">Found With:</span> Bone fragments, pottery shards</p>
-            <p><span class="label">Burial or Habitat Context:</span> Individual grave</p>
-            <p><span class="label">Symbolism:</span> Possibly ceremonial use indicated by polished edges</p>
-            <p><span class="label">Comparison:</span> Similar to other Late Neolithic spearheads in Central Europe</p>
+    <div class="artifact-block">
+        <img src="../images/collections/marker-arch.jpg" alt="Marker Arch Fragment">
+        <div class="artifact-info">
+            <h2>Marker Arch Fragment</h2>
+            <div class="artifact-columns">
+                <div>
+                    <strong>Material:</strong> Dense composite stone (volcanic basalt, lunar silicate, fused ash)<br>
+                    <strong>Size/Weight/Shape:</strong> 2.3 m high segment; partial arc, tapering base; est. 1.4 metric tons<br>
+                    <strong>Estimated Age:</strong> ~22,000 years<br>
+                    <strong>Preservation State:</strong> Lower right third remains; inscription field partially intact
+                </div>
+                <div>
+                    <strong>Likely Purpose:</strong> Ceremonial or calendrical archway; seasonal passage marker<br>
+                    <strong>Evidence of Use:</strong> Polished threshold stone; soot traces beneath arch<br>
+                    <strong>Manufacture Clues:</strong> Precision jointing; angle-carved keystone; 7-point symbol array
+                </div>
+                <div>
+                    <strong>Found With:</strong> Burnt charcoal flecks, obsidian beads, crushed pigment<br>
+                    <strong>Burial or Habitat Context:</strong> Buried beneath basalt and sediment; ridge stabilized by stonework<br>
+                    <strong>Symbolism:</strong> Spiral and nested triangle motifs; possibly celestial alignment<br>
+                    <strong>Comparison:</strong> Similar to standing stone gates at Aetha-Zul but with finer symbolic work
+                </div>
+            </div>
         </div>
     </div>
-    <div class="artifact-divider"></div>
 
     <!-- Artifact 2 -->
-    <div class="artifact">
-        <img src="../images/collections/ceramic_vessel.png" alt="Ancient ceramic vessel">
-        <div class="artifact-metadata">
-            <p><span class="label">Name:</span> Ceramic Storage Vessel</p>
-            <p><span class="label">Material:</span> Fired clay</p>
-            <p><span class="label">Size/Weight/Shape:</span> 25 cm tall, round base, 15 cm diameter mouth</p>
-            <p><span class="label">Estimated Age:</span> ~1800 BCE</p>
-            <p><span class="label">Preservation State:</span> Pristine</p>
-            <p><span class="label">Location Found:</span> Midden excavation, Egypt, coordinates 26.2N, 31.3E</p>
-            <p><span class="label">Likely Purpose:</span> Storage of grains or liquids</p>
-            <p><span class="label">Evidence of Use:</span> Residue of oil and grains</p>
-            <p><span class="label">Manufacture Clues:</span> Coil-built with slip decoration</p>
-            <p><span class="label">Found With:</span> Broken tools, other vessels</p>
-            <p><span class="label">Burial or Habitat Context:</span> Household midden</p>
-            <p><span class="label">Symbolism:</span> Painted geometric patterns</p>
-            <p><span class="label">Comparison:</span> Matches contemporaneous storage jars from Upper Egypt</p>
+    <div class="artifact-block">
+        <img src="../images/collections/obsidian-spearhead.jpg" alt="Obsidian Spearhead">
+        <div class="artifact-info">
+            <h2>Obsidian Spearhead</h2>
+            <div class="artifact-columns">
+                <div>
+                    <strong>Material:</strong> Volcanic glass (obsidian)<br>
+                    <strong>Size/Weight/Shape:</strong> 18 cm length; triangular cross-section; sharp point<br>
+                    <strong>Estimated Age:</strong> ~12,500 years<br>
+                    <strong>Preservation State:</strong> Fragmented tip; lateral flake scars visible
+                </div>
+                <div>
+                    <strong>Likely Purpose:</strong> Hunting weapon; ritualized object<br>
+                    <strong>Evidence of Use:</strong> Chipped edges; polish at hafting point<br>
+                    <strong>Manufacture Clues:</strong> Pressure flaking; fine retouch along edges
+                </div>
+                <div>
+                    <strong>Found With:</strong> Charred bird bones, red ochre traces<br>
+                    <strong>Burial or Habitat Context:</strong> Cave midden deposit<br>
+                    <strong>Symbolism:</strong> Possible ritual significance<br>
+                    <strong>Comparison:</strong> Similar to spearheads in nearby Aetha cave system
+                </div>
+            </div>
         </div>
     </div>
-    <div class="artifact-divider"></div>
 
     <!-- Artifact 3 -->
-    <div class="artifact">
-        <img src="../images/collections/bronze_axe.png" alt="Bronze axe">
-        <div class="artifact-metadata">
-            <p><span class="label">Name:</span> Bronze Axe</p>
-            <p><span class="label">Material:</span> Bronze</p>
-            <p><span class="label">Size/Weight/Shape:</span> 30 cm length, 2 kg, wedge-shaped blade</p>
-            <p><span class="label">Estimated Age:</span> ~1500 BCE</p>
-            <p><span class="label">Preservation State:</span> Complete</p>
-            <p><span class="label">Location Found:</span> Mountain excavation, Italy, coordinates 44.0N, 11.5E</p>
-            <p><span class="label">Likely Purpose:</span> Tool or weapon</p>
-            <p><span class="label">Evidence of Use:</span> Edge wear and minor dents</p>
-            <p><span class="label">Manufacture Clues:</span> Cast with mold, hammered edges</p>
-            <p><span class="label">Found With:</span> Stone tools, animal bones</p>
-            <p><span class="label">Burial or Habitat Context:</span> Cave dwelling debris</p>
-            <p><span class="label">Symbolism:</span> Decorative incisions suggest status</p>
-            <p><span class="label">Comparison:</span> Similar to Bronze Age axes from Northern Italy</p>
+    <div class="artifact-block">
+        <img src="../images/collections/clay-vessel.jpg" alt="Clay Storage Vessel">
+        <div class="artifact-info">
+            <h2>Clay Storage Vessel</h2>
+            <div class="artifact-columns">
+                <div>
+                    <strong>Material:</strong> Fired terracotta clay<br>
+                    <strong>Size/Weight/Shape:</strong> 45 cm height; 25 cm diameter; cylindrical<br>
+                    <strong>Estimated Age:</strong> ~3,200 years<br>
+                    <strong>Preservation State:</strong> Cracks along rim; handle intact
+                </div>
+                <div>
+                    <strong>Likely Purpose:</strong> Storage of grains or liquids<br>
+                    <strong>Evidence of Use:</strong> Soot around neck; sediment residues inside<br>
+                    <strong>Manufacture Clues:</strong> Wheel-thrown; coiled base; linear incisions
+                </div>
+                <div>
+                    <strong>Found With:</strong> Grain remnants; small cup fragments<br>
+                    <strong>Burial or Habitat Context:</strong> House floor; domestic refuse pit<br>
+                    <strong>Symbolism:</strong> Linear incisions may indicate ownership or family clan<br>
+                    <strong>Comparison:</strong> Similar vessels from Bronze Age settlements nearby
+                </div>
+            </div>
         </div>
     </div>
+
 </section>
 
-<!-- Anthropology Section (hidden initially) -->
+<!-- Anthropology Section -->
 <section id="anthropology" class="collection-section" style="display:none;">
-    <div class="collection-category">
-        <h1>Anthropology Remains</h1>
-    </div>
+    <h1>Anthropology</h1>
 
-    <!-- Artifact 1 -->
-    <div class="artifact">
-        <img src="../images/collections/human_skull.png" alt="Human skull remains">
-        <div class="artifact-metadata">
-            <p><span class="label">Name:</span> Human Skull</p>
-            <p><span class="label">Material:</span> Bone</p>
-            <p><span class="label">Size/Weight/Shape:</span> Adult skull, 15 cm high</p>
-            <p><span class="label">Estimated Age:</span> ~500 CE</p>
-            <p><span class="label">Preservation State:</span> Partial; missing mandible</p>
-            <p><span class="label">Location Found:</span> Burial mound, coordinates 35.2N, 78.3W</p>
-            <p><span class="label">Likely Purpose:</span> Human remains</p>
-            <p><span class="label">Evidence of Use:</span> Cut marks indicate ritual defleshing</p>
-            <p><span class="label">Manufacture Clues:</span> N/A</p>
-            <p><span class="label">Found With:</span> Grave goods, pottery fragments</p>
-            <p><span class="label">Burial or Habitat Context:</span> Mound burial</p>
-            <p><span class="label">Symbolism:</span> Placement suggests ceremonial practice</p>
-            <p><span class="label">Comparison:</span> Matches other Iron Age burial patterns</p>
+    <!-- Artifact 4 -->
+    <div class="artifact-block">
+        <img src="../images/collections/human-skull.jpg" alt="Human Skull Remains">
+        <div class="artifact-info">
+            <h2>Human Skull Remains</h2>
+            <div class="artifact-columns">
+                <div>
+                    <strong>Material:</strong> Bone<br>
+                    <strong>Size/Weight/Shape:</strong> Adult cranium; complete<br>
+                    <strong>Estimated Age:</strong> ~4,500 years<br>
+                    <strong>Preservation State:</strong> Pristine; sutures intact
+                </div>
+                <div>
+                    <strong>Likely Purpose:</strong> Burial ritual<br>
+                    <strong>Evidence of Use:</strong> No cut marks; mineral deposits on surface<br>
+                    <strong>Manufacture Clues:</strong> Natural formation; no modification
+                </div>
+                <div>
+                    <strong>Found With:</strong> Burial goods, beads, textile fragments<br>
+                    <strong>Burial or Habitat Context:</strong> Tomb chamber<br>
+                    <strong>Symbolism:</strong> Skull orientation toward sunrise<br>
+                    <strong>Comparison:</strong> Similar to nearby Bronze Age burials
+                </div>
+            </div>
         </div>
     </div>
-    <div class="artifact-divider"></div>
 
-    <!-- Artifact 2 -->
-    <div class="artifact">
-        <img src="../images/collections/femur_remains.png" alt="Femur remains">
-        <div class="artifact-metadata">
-            <p><span class="label">Name:</span> Femur Bone</p>
-            <p><span class="label">Material:</span> Bone</p>
-            <p><span class="label">Size/Weight/Shape:</span> Adult, 45 cm length</p>
-            <p><span class="label">Estimated Age:</span> ~300 CE</p>
-            <p><span class="label">Preservation State:</span> Complete</p>
-            <p><span class="label">Location Found:</span> Cave site, coordinates 36.1N, 79.0W</p>
-            <p><span class="label">Likely Purpose:</span> Skeletal remains</p>
-            <p><span class="label">Evidence of Use:</span> Cut marks suggest defleshing or tool use</p>
-            <p><span class="label">Manufacture Clues:</span> N/A</p>
-            <p><span class="label">Found With:</span> Stone tools, charcoal</p>
-            <p><span class="label">Burial or Habitat Context:</span> Cave habitation</p>
-            <p><span class="label">Symbolism:</span> Placement suggests ritual activity</p>
-            <p><span class="label">Comparison:</span> Matches other prehistoric cave burials</p>
+    <!-- Artifact 5 -->
+    <div class="artifact-block">
+        <img src="../images/collections/pottery-figurine.jpg" alt="Pottery Figurine">
+        <div class="artifact-info">
+            <h2>Pottery Figurine</h2>
+            <div class="artifact-columns">
+                <div>
+                    <strong>Material:</strong> Clay with painted surface<br>
+                    <strong>Size/Weight/Shape:</strong> 12 cm height; rounded base<br>
+                    <strong>Estimated Age:</strong> ~2,100 years<br>
+                    <strong>Preservation State:</strong> Complete; minor surface chipping
+                </div>
+                <div>
+                    <strong>Likely Purpose:</strong> Ritual offering or domestic ornament<br>
+                    <strong>Evidence of Use:</strong> Finger marks on surface; pigment residues<br>
+                    <strong>Manufacture Clues:</strong> Molded with hand-painted motifs
+                </div>
+                <div>
+                    <strong>Found With:</strong> Ceremonial hearth, small tokens<br>
+                    <strong>Burial or Habitat Context:</strong> Domestic altar<br>
+                    <strong>Symbolism:</strong> Anthropomorphic representation of fertility<br>
+                    <strong>Comparison:</strong> Similar figurines in regional archaeological sites
+                </div>
+            </div>
         </div>
     </div>
-    <div class="artifact-divider"></div>
 
-    <!-- Artifact 3 -->
-    <div class="artifact">
-        <img src="../images/collections/teeth_set.png" alt="Set of human teeth">
-        <div class="artifact-metadata">
-            <p><span class="label">Name:</span> Set of Human Teeth</p>
-            <p><span class="label">Material:</span> Enamel and dentin</p>
-            <p><span class="label">Size/Weight/Shape:</span> Adult human, 32 teeth</p>
-            <p><span class="label">Estimated Age:</span> ~600 CE</p>
-            <p><span class="label">Preservation State:</span> Complete, well-preserved</p>
-            <p><span class="label">Location Found:</span> Burial pit, coordinates 35.9N, 78.5W</p>
-            <p><span class="label">Likely Purpose:</span> Skeletal remains</p>
-            <p><span class="label">Evidence of Use:</span> Wear patterns indicate diet</p>
-            <p><span class="label">Manufacture Clues:</span> N/A</p>
-            <p><span class="label">Found With:</span> Fragments of clothing, small tools</p>
-            <p><span class="label">Burial or Habitat Context:</span> Pit burial</p>
-            <p><span class="label">Symbolism:</span> Possible ceremonial deposition</p>
-            <p><span class="label">Comparison:</span> Consistent with regional burial practices</p>
+    <!-- Artifact 6 -->
+    <div class="artifact-block">
+        <img src="../images/collections/stone-tool.jpg" alt="Stone Tool Assemblage">
+        <div class="artifact-info">
+            <h2>Stone Tool Assemblage</h2>
+            <div class="artifact-columns">
+                <div>
+                    <strong>Material:</strong> Flint and chert<br>
+                    <strong>Size/Weight/Shape:</strong> 10–20 cm lengths; sharp edges<br>
+                    <strong>Estimated Age:</strong> ~6,000 years<br>
+                    <strong>Preservation State:</strong> Pristine; edges intact
+                </div>
+                <div>
+                    <strong>Likely Purpose:</strong> Cutting, scraping, or ceremonial uses<br>
+                    <strong>Evidence of Use:</strong> Polishing along edges; residues<br>
+                    <strong>Manufacture Clues:</strong> Pressure flaking; micro-chipping
+                </div>
+                <div>
+                    <strong>Found With:</strong> Animal bones, charred plant remains<br>
+                    <strong>Burial or Habitat Context:</strong> Domestic midden<br>
+                    <strong>Symbolism:</strong> N/A<br>
+                    <strong>Comparison:</strong> Similar to tools in nearby ethnographic collections
+                </div>
+            </div>
         </div>
     </div>
+
 </section>
 
-<!-- Footer -->
+</main>
+
 <footer class="bottom-field">
     <p>This is a fictitious website created purely for academic purposes.</p>
     <p>The content and images on this site were created using AI assistance and curated by a human.</p>
 </footer>
 
-<!-- JS for toggling sections -->
+<!-- JS to show/hide sections -->
 <script>
 function showSection(section) {
     const sections = document.querySelectorAll('.collection-section');
