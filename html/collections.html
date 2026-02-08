@@ -4,33 +4,179 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>Collections – Fictitious Museum</title>
+<meta name="author" content="Shane R.">
+<title>Fictitious Museum Collections</title>
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
 <header class="top-field">
-    <h1>Collections</h1>
+    <h1>Fictitious Museum</h1>
     <nav>
-        <button onclick="location.href='../index.html'">Home</button>
         <button onclick="location.href='staff.html'">Staff</button>
         <button onclick="location.href='collections.html'">Collections</button>
     </nav>
 </header>
 
-<main class="collections-nav">
-    <ul>
-        <li><button>Archeology</button></li>
-        <li><button>Anthropology</button></li>
-        <li><button>History</button></li>
-    </ul>
-    <p>Content for each gallery will be added later.</p>
-</main>
+<!-- Navigation for Archeology and Anthropology -->
+<div class="collections-nav">
+    <button onclick="showSection('archeology')">Archeology</button>
+    <button onclick="showSection('anthropology')">Anthropology</button>
+    <p>The content in this gallery was entirely created by AI under human direction. It was then curated, reviewed and edited by a human before being published.</p>
+</div>
 
+<!-- Archeology Section -->
+<section id="archeology" class="collection-section">
+    <div class="collection-category">
+        <h1>Archeology Artifacts</h1>
+    </div>
+
+    <!-- Artifact 1 -->
+    <div class="artifact">
+        <img src="../images/collections/obsidian_spearhead.png" alt="Obsidian spearhead">
+        <div class="artifact-metadata">
+            <p><span class="label">Name:</span> Obsidian Spearhead</p>
+            <p><span class="label">Material:</span> Obsidian and wood</p>
+            <p><span class="label">Size/Weight/Shape:</span> 15 cm length, tapered triangular blade</p>
+            <p><span class="label">Estimated Age:</span> ~2500 BCE</p>
+            <p><span class="label">Preservation State:</span> Partially preserved; wood degraded</p>
+            <p><span class="label">Location Found:</span> Burial site, Central Europe, coordinates 48.2N, 16.3E</p>
+            <p><span class="label">Likely Purpose:</span> Hunting weapon</p>
+            <p><span class="label">Evidence of Use:</span> Minor wear along edges, residue of animal blood</p>
+            <p><span class="label">Manufacture Clues:</span> Flaked carefully with pressure technique, hafted into wood shaft</p>
+            <p><span class="label">Found With:</span> Bone fragments, pottery shards</p>
+            <p><span class="label">Burial or Habitat Context:</span> Individual grave</p>
+            <p><span class="label">Symbolism:</span> Possibly ceremonial use indicated by polished edges</p>
+            <p><span class="label">Comparison:</span> Similar to other Late Neolithic spearheads in Central Europe</p>
+        </div>
+    </div>
+    <div class="artifact-divider"></div>
+
+    <!-- Artifact 2 -->
+    <div class="artifact">
+        <img src="../images/collections/ceramic_vessel.png" alt="Ancient ceramic vessel">
+        <div class="artifact-metadata">
+            <p><span class="label">Name:</span> Ceramic Storage Vessel</p>
+            <p><span class="label">Material:</span> Fired clay</p>
+            <p><span class="label">Size/Weight/Shape:</span> 25 cm tall, round base, 15 cm diameter mouth</p>
+            <p><span class="label">Estimated Age:</span> ~1800 BCE</p>
+            <p><span class="label">Preservation State:</span> Pristine</p>
+            <p><span class="label">Location Found:</span> Midden excavation, Egypt, coordinates 26.2N, 31.3E</p>
+            <p><span class="label">Likely Purpose:</span> Storage of grains or liquids</p>
+            <p><span class="label">Evidence of Use:</span> Residue of oil and grains</p>
+            <p><span class="label">Manufacture Clues:</span> Coil-built with slip decoration</p>
+            <p><span class="label">Found With:</span> Broken tools, other vessels</p>
+            <p><span class="label">Burial or Habitat Context:</span> Household midden</p>
+            <p><span class="label">Symbolism:</span> Painted geometric patterns</p>
+            <p><span class="label">Comparison:</span> Matches contemporaneous storage jars from Upper Egypt</p>
+        </div>
+    </div>
+    <div class="artifact-divider"></div>
+
+    <!-- Artifact 3 -->
+    <div class="artifact">
+        <img src="../images/collections/bronze_axe.png" alt="Bronze axe">
+        <div class="artifact-metadata">
+            <p><span class="label">Name:</span> Bronze Axe</p>
+            <p><span class="label">Material:</span> Bronze</p>
+            <p><span class="label">Size/Weight/Shape:</span> 30 cm length, 2 kg, wedge-shaped blade</p>
+            <p><span class="label">Estimated Age:</span> ~1500 BCE</p>
+            <p><span class="label">Preservation State:</span> Complete</p>
+            <p><span class="label">Location Found:</span> Mountain excavation, Italy, coordinates 44.0N, 11.5E</p>
+            <p><span class="label">Likely Purpose:</span> Tool or weapon</p>
+            <p><span class="label">Evidence of Use:</span> Edge wear and minor dents</p>
+            <p><span class="label">Manufacture Clues:</span> Cast with mold, hammered edges</p>
+            <p><span class="label">Found With:</span> Stone tools, animal bones</p>
+            <p><span class="label">Burial or Habitat Context:</span> Cave dwelling debris</p>
+            <p><span class="label">Symbolism:</span> Decorative incisions suggest status</p>
+            <p><span class="label">Comparison:</span> Similar to Bronze Age axes from Northern Italy</p>
+        </div>
+    </div>
+</section>
+
+<!-- Anthropology Section (hidden initially) -->
+<section id="anthropology" class="collection-section" style="display:none;">
+    <div class="collection-category">
+        <h1>Anthropology Remains</h1>
+    </div>
+
+    <!-- Artifact 1 -->
+    <div class="artifact">
+        <img src="../images/collections/human_skull.png" alt="Human skull remains">
+        <div class="artifact-metadata">
+            <p><span class="label">Name:</span> Human Skull</p>
+            <p><span class="label">Material:</span> Bone</p>
+            <p><span class="label">Size/Weight/Shape:</span> Adult skull, 15 cm high</p>
+            <p><span class="label">Estimated Age:</span> ~500 CE</p>
+            <p><span class="label">Preservation State:</span> Partial; missing mandible</p>
+            <p><span class="label">Location Found:</span> Burial mound, coordinates 35.2N, 78.3W</p>
+            <p><span class="label">Likely Purpose:</span> Human remains</p>
+            <p><span class="label">Evidence of Use:</span> Cut marks indicate ritual defleshing</p>
+            <p><span class="label">Manufacture Clues:</span> N/A</p>
+            <p><span class="label">Found With:</span> Grave goods, pottery fragments</p>
+            <p><span class="label">Burial or Habitat Context:</span> Mound burial</p>
+            <p><span class="label">Symbolism:</span> Placement suggests ceremonial practice</p>
+            <p><span class="label">Comparison:</span> Matches other Iron Age burial patterns</p>
+        </div>
+    </div>
+    <div class="artifact-divider"></div>
+
+    <!-- Artifact 2 -->
+    <div class="artifact">
+        <img src="../images/collections/femur_remains.png" alt="Femur remains">
+        <div class="artifact-metadata">
+            <p><span class="label">Name:</span> Femur Bone</p>
+            <p><span class="label">Material:</span> Bone</p>
+            <p><span class="label">Size/Weight/Shape:</span> Adult, 45 cm length</p>
+            <p><span class="label">Estimated Age:</span> ~300 CE</p>
+            <p><span class="label">Preservation State:</span> Complete</p>
+            <p><span class="label">Location Found:</span> Cave site, coordinates 36.1N, 79.0W</p>
+            <p><span class="label">Likely Purpose:</span> Skeletal remains</p>
+            <p><span class="label">Evidence of Use:</span> Cut marks suggest defleshing or tool use</p>
+            <p><span class="label">Manufacture Clues:</span> N/A</p>
+            <p><span class="label">Found With:</span> Stone tools, charcoal</p>
+            <p><span class="label">Burial or Habitat Context:</span> Cave habitation</p>
+            <p><span class="label">Symbolism:</span> Placement suggests ritual activity</p>
+            <p><span class="label">Comparison:</span> Matches other prehistoric cave burials</p>
+        </div>
+    </div>
+    <div class="artifact-divider"></div>
+
+    <!-- Artifact 3 -->
+    <div class="artifact">
+        <img src="../images/collections/teeth_set.png" alt="Set of human teeth">
+        <div class="artifact-metadata">
+            <p><span class="label">Name:</span> Set of Human Teeth</p>
+            <p><span class="label">Material:</span> Enamel and dentin</p>
+            <p><span class="label">Size/Weight/Shape:</span> Adult human, 32 teeth</p>
+            <p><span class="label">Estimated Age:</span> ~600 CE</p>
+            <p><span class="label">Preservation State:</span> Complete, well-preserved</p>
+            <p><span class="label">Location Found:</span> Burial pit, coordinates 35.9N, 78.5W</p>
+            <p><span class="label">Likely Purpose:</span> Skeletal remains</p>
+            <p><span class="label">Evidence of Use:</span> Wear patterns indicate diet</p>
+            <p><span class="label">Manufacture Clues:</span> N/A</p>
+            <p><span class="label">Found With:</span> Fragments of clothing, small tools</p>
+            <p><span class="label">Burial or Habitat Context:</span> Pit burial</p>
+            <p><span class="label">Symbolism:</span> Possible ceremonial deposition</p>
+            <p><span class="label">Comparison:</span> Consistent with regional burial practices</p>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
 <footer class="bottom-field">
     <p>This is a fictitious website created purely for academic purposes.</p>
     <p>The content and images on this site were created using AI assistance and curated by a human.</p>
 </footer>
+
+<!-- JS for toggling sections -->
+<script>
+function showSection(section) {
+    const sections = document.querySelectorAll('.collection-section');
+    sections.forEach(s => s.style.display = 'none');
+    document.getElementById(section).style.display = 'block';
+}
+</script>
 
 </body>
 </html>
