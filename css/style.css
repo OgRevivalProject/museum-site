@@ -102,12 +102,12 @@
     margin-top: 20px;
 }
 
-/* Navigation buttons styling */
+/* Navigation buttons styling for top nav */
 .nav-button {
     display: inline-block;      
     padding: 10px 20px;         
     margin: 0 5px;              
-    background-color: #0073e6;   
+    background-color: #6b7c93;   
     color: white;                
     text-decoration: none;       
     border-radius: 5px;        
@@ -117,5 +117,5 @@
 }
 
 .nav-button:hover {
-    background-color: #005bb5;  
+    background-color: #9aa3b2; 
 }
