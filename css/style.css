@@ -1,214 +1,103 @@
-/* --- Global Styles --- */
-body {
+/* ===== Collections Page ===== */
+.collections-page {
     font-family: Arial, sans-serif;
-    background-color: #f8f7f2;
-    margin: 0;
-    padding: 0;
+    background-color: #f4f5f7;
     color: #333;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-button {
-    cursor: pointer;
-}
-
-body.home {
-    background: url('/images/background.png') no-repeat center center;
-    background-size: cover;
-}
-
-/* --- Header --- */
+/* Main header */
 .top-field {
-    background-color: #4a4e69;
-    color: #f2e9e4;
+    background-color: #4a5a70;
+    color: #fff;
     padding: 20px;
     text-align: center;
 }
 
-.top-field nav button {
+.top-field nav button,
+.collections-nav button {
     margin: 5px;
     padding: 10px 20px;
     font-size: 1rem;
     border: none;
     border-radius: 5px;
-    background-color: #9a8c98;
-    color: #f2e9e4;
+    background-color: #6b7c93;
+    color: #fff;
+    cursor: pointer;
 }
 
-.top-field nav button:hover {
-    background-color: #c9ada7;
+.top-field nav button:hover,
+.collections-nav button:hover {
+    background-color: #9aa3b2;
 }
 
-/* --- Main Homepage Sections --- */
-.three-columns {
-    display: flex;
-    justify-content: space-around;
-    margin: 20px;
-    gap: 15px;
-}
-
-.three-columns section {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 15px;
-    border-radius: 10px;
-    flex: 1;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.three-columns img {
-    max-width: 100%;
-    border-radius: 5px;
-}
-
-/* --- Staff Page --- */
-.staff-page {
-    max-width: 1100px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
-
-.staff-block {
-    display: flex;
-    align-items: flex-start;
-    gap: 40px;
-    margin-bottom: 60px;
-}
-
-.staff-block.reverse {
-    flex-direction: row-reverse;
-}
-
-.staff-block img {
-    width: 38%;
-    border-radius: 10px;
-    object-fit: cover;
-    height: 100%;
-}
-
-.staff-info {
-    width: 62%;
-}
-
-.staff-info h2 {
-    margin-bottom: 5px;
-}
-
-.staff-info h3 {
-    margin-top: 0;
-    color: #555;
-    font-weight: normal;
-}
-
-.staff-info p {
-    line-height: 1.6;
-    margin-bottom: 10px;
-}
-
-/* --- Collections Navigation --- */
+/* Sub-navigation */
 .collections-nav {
     text-align: center;
-    margin-top: 30px;
-}
-
-.collections-nav button {
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 5px;
-    border: none;
-    background-color: #9a8c98;
-    color: #f2e9e4;
-    margin: 5px;
-}
-
-.collections-nav button:hover {
-    background-color: #c9ada7;
+    margin: 20px 0;
 }
 
 .collections-nav p {
-    margin-top: 15px;
+    margin-top: 10px;
     font-style: italic;
     color: #555;
 }
 
-/* --- Collections Sections --- */
-.collection-section {
-    max-width: 1100px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
-
-.collection-category h1 {
-    text-align: center;
-    margin-bottom: 30px;
-    color: #4a4e69;
-}
-
 /* Artifact layout */
-.artifact {
+.artifact-block {
     display: flex;
-    flex-wrap: wrap;
     gap: 20px;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(255,255,255,0.95);
+    margin: 20px auto;
     padding: 15px;
     border-radius: 10px;
-    margin-bottom: 40px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.artifact img {
-    flex: 1 1 40%;
-    max-width: 40%;
-    border-radius: 10px;
+.artifact-block img {
+    width: 30%;
+    border-radius: 8px;
     object-fit: cover;
 }
 
-.artifact-metadata {
-    flex: 1 1 55%;
+.artifact-info {
+    width: 70%;
+}
+
+.artifact-info h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.artifact-columns {
     display: flex;
-    flex-direction: column;
-    gap: 5px;
+    justify-content: space-between;
+    gap: 20px;
 }
 
-.artifact-metadata p {
-    margin: 3px 0;
-    line-height: 1.4;
+.artifact-columns div {
+    width: 33%;
+    line-height: 1.5;
 }
 
-.artifact-metadata .label {
-    font-weight: bold;
+/* Responsive */
+@media screen and (max-width: 900px) {
+    .artifact-block {
+        flex-direction: column;
+        align-items: center;
+    }
+    .artifact-columns {
+        flex-direction: column;
+    }
+    .artifact-columns div {
+        width: 100%;
+    }
 }
 
-/* Divider between artifacts */
-.artifact-divider {
-    height: 2px;
-    background-color: #ccc;
-    margin: 20px 0;
-}
-
-/* --- Footer --- */
+/* Footer */
 .bottom-field {
     background-color: #22223b;
     color: #f2e9e4;
     text-align: center;
     padding: 15px;
     margin-top: 20px;
-}
-
-/* --- Responsive --- */
-@media (max-width: 900px) {
-    .artifact {
-        flex-direction: column;
-    }
-    .artifact img, .artifact-metadata {
-        max-width: 100%;
-        flex: 1 1 100%;
-    }
-    .three-columns {
-        flex-direction: column;
-    }
 }
