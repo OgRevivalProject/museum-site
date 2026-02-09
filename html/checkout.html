@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html>
+<head>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+
 <body>
 
 <h1>Checkout</h1>
@@ -12,7 +16,7 @@ let total=0;
 
 cart.forEach(i=>{
 total+=i.price*i.qty;
-invoice.innerHTML+=`<p>${i.title} x${i.qty}</p>`;
+invoice.innerHTML+=`${i.title} x${i.qty}<br>`;
 });
 
 invoice.innerHTML+=`<h3>Total: $${total.toFixed(2)}</h3>`;
