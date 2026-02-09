@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html>
+<head>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+
 <body>
 
 <h1>Your Cart</h1>
@@ -11,12 +15,11 @@
 
 <script>
 let cart=JSON.parse(localStorage.getItem("cart"))||[];
-let container=document.getElementById("cartItems");
+let div=document.getElementById("cartItems");
 
 cart.forEach((i,index)=>{
-container.innerHTML+=`
-<p>${i.title} x${i.qty} – $${(i.price*i.qty).toFixed(2)}
-<button onclick="remove(${index})">Remove</button></p>`;
+div.innerHTML+=`${i.title} x${i.qty} - $${(i.price*i.qty).toFixed(2)}
+<button onclick="remove(${index})">Remove</button><br>`;
 });
 
 function remove(i){
