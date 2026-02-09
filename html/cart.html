@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Your Cart</h1>
+
+<div id="cartItems"></div>
+
+<a href="shop.html" class="main-button">Keep Shopping</a>
+<a href="checkout.html" class="main-button">Checkout</a>
+
+<script>
+let cart=JSON.parse(localStorage.getItem("cart"))||[];
+let container=document.getElementById("cartItems");
+
+cart.forEach((i,index)=>{
+container.innerHTML+=`
+<p>${i.title} x${i.qty} – $${(i.price*i.qty).toFixed(2)}
+<button onclick="remove(${index})">Remove</button></p>`;
+});
+
+function remove(i){
+cart.splice(i,1);
+localStorage.setItem("cart",JSON.stringify(cart));
+location.reload();
+}
+</script>
+
+</body>
+</html>
