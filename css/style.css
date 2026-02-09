@@ -1,4 +1,4 @@
-/* ===== GLOBAL BASE ===== */
+/* ===== GLOBAL ===== */
 
 body {
     font-family: Arial, sans-serif;
@@ -7,7 +7,7 @@ body {
     margin: 0;
 }
 
-/* Universal button style (used by shop + cart + checkout) */
+/* Shared Buttons */
 
 .main-button {
     margin: 5px;
@@ -24,13 +24,7 @@ body {
     background-color: #9aa3b2;
 }
 
-/* ===== Collections Page ===== */
-
-.collections-page {
-    background-color: #f4f5f7;
-}
-
-/* Main header */
+/* ===== COLLECTIONS ===== */
 
 .top-field {
     background-color: #4a5a70;
@@ -39,92 +33,31 @@ body {
     text-align: center;
 }
 
-.top-field nav button,
-.collections-nav button {
-    margin: 5px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-    background-color: #6b7c93;
-    color: #fff;
-    cursor: pointer;
-}
-
-.top-field nav button:hover,
-.collections-nav button:hover {
-    background-color: #9aa3b2;
-}
-
-/* Sub-navigation */
-
 .collections-nav {
     text-align: center;
     margin: 20px 0;
 }
 
-.collections-nav p {
-    margin-top: 10px;
-    font-style: italic;
-    color: #555;
-}
-
-/* Artifact layout */
-
 .artifact-block {
     display: flex;
     gap: 20px;
-    background-color: rgba(255,255,255,0.95);
-    margin: 20px auto;
+    background: white;
+    margin: 20px;
     padding: 15px;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .artifact-block img {
     width: 30%;
     border-radius: 8px;
-    object-fit: cover;
-}
-
-.artifact-info {
-    width: 70%;
-}
-
-.artifact-info h2 {
-    margin-top: 0;
-    margin-bottom: 10px;
 }
 
 .artifact-columns {
     display: flex;
-    justify-content: space-between;
     gap: 20px;
 }
 
-.artifact-columns div {
-    width: 33%;
-    line-height: 1.5;
-}
-
-/* Responsive */
-
-@media screen and (max-width: 900px) {
-    .artifact-block {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .artifact-columns {
-        flex-direction: column;
-    }
-
-    .artifact-columns div {
-        width: 100%;
-    }
-}
-
-/* ===== SHOP PAGE ===== */
+/* ===== SHOP ===== */
 
 .shop-container {
     display: grid;
@@ -135,19 +68,15 @@ body {
 
 .souvenir-item {
     background: white;
-    border-radius: 10px;
     padding: 1rem;
+    border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,.15);
 }
 
 .souvenir-item img {
     width: 100%;
-    border-radius: 6px;
     cursor: pointer;
-}
-
-.price {
-    font-weight: bold;
+    border-radius: 6px;
 }
 
 /* Modal */
@@ -167,12 +96,11 @@ body {
     max-width: 600px;
 }
 
-/* ===== Footer ===== */
+/* Footer */
 
 .bottom-field {
-    background-color: #22223b;
-    color: #f2e9e4;
-    text-align: center;
-    padding: 15px;
-    margin-top: 20px;
+    background:#22223b;
+    color:#f2e9e4;
+    text-align:center;
+    padding:15px;
 }
