@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Souvenir Shop</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+.shop-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:2rem;
+padding:2rem;
+}
+
+.souvenir-item{
+border:2px solid #222;
+padding:1rem;
+background:#f8f8f8;
+}
+
+.modal{
+display:none;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.8);
+justify-content:center;
+align-items:center;
+}
+
+.modal-content{
+background:white;
+padding:2rem;
+max-width:600px;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="collections.html">Collections</a>
+<a href="staff.html">Staff</a>
+<a href="shop.html">Shop (<span id="cartCount">0</span>)</a>
+</nav>
+
+<h1>Souvenir Shop</h1>
+
+<div class="shop-container">
+
+<div class="souvenir-item" data-id="item001" data-title="Celestial Inkstone" data-price="14.95" data-img="images/inkstone.jpg" data-desc="Meteoric basalt ritual platform. Found in Kilan Valley.">
+<img src="images/inkstone.jpg" alt="Celestial Inkstone" onclick="openModal(this.parentElement)">
+<h3>Celestial Inkstone</h3>
+<p title="Replica of the Oracle Basin.">Archeological Collection</p>
+<p>$14.95</p>
+<button class="main-button" onclick="addToCart(this.parentElement)">Add Celestial Inkstone to Cart</button>
+</div>
+
+<div class="souvenir-item" data-id="item002" data-title="Spiral Claw Fossil" data-price="22.95" data-img="images/claw.jpg" data-desc="Volcanic composite fossil. Basin 47-E ridge.">
+<img src="images/claw.jpg" alt="Spiral Claw Fossil" onclick="openModal(this.parentElement)">
+<h3>Spiral Claw Fossil</h3>
+<p title="Echo of the ridge guardians.">Anthropological Collection</p>
+<p>$22.95</p>
+<button class="main-button" onclick="addToCart(this.parentElement)">Add Spiral Claw Fossil to Cart</button>
+</div>
+
+<div class="souvenir-item" data-id="item003" data-title="Basalt Glyphstone" data-price="14.95" data-img="images/glyph.jpg" data-desc="Oceanic basalt invocation tablet.">
+<img src="images/glyph.jpg" alt="Basalt Glyphstone" onclick="openModal(this.parentElement)">
+<h3>Basalt Glyphstone</h3>
+<p title="Whispers of the deep.">Lovecraft Collection</p>
+<p>$14.95</p>
+<button class="main-button" onclick="addToCart(this.parentElement)">Add Basalt Glyphstone to Cart</button>
+</div>
+
+<div class="souvenir-item" data-id="item004" data-title="Marker Arch Fragment" data-price="22.95" data-img="images/arch.jpg" data-desc="Ceremonial calendar stone marker.">
+<img src="images/arch.jpg" alt="Marker Arch Fragment" onclick="openModal(this.parentElement)">
+<h3>Marker Arch Fragment</h3>
+<p title="Time bends at the arch.">Archeological Collection</p>
+<p>$22.95</p>
+<button class="main-button" onclick="addToCart(this.parentElement)">Add Marker Arch Fragment to Cart</button>
+</div>
+
+</div>
+
+<a href="cart.html" class="main-button">View Cart</a>
+
+<div id="modal" class="modal">
+<div class="modal-content">
+<button onclick="closeModal()">Close</button>
+<img id="modalImg" width="100%">
+<h3 id="modalTitle"></h3>
+<p id="modalDesc"></p>
+</div>
+</div>
+
+<script>
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+updateCount();
+
+function addToCart(item){
+let id=item.dataset.id;
+let existing=cart.find(i=>i.id===id);
+
+if(existing){existing.qty++;}
+else{
+cart.push({
+id,
+title:item.dataset.title,
+price:item.dataset.price,
+qty:1
+});
+}
+
+localStorage.setItem("cart",JSON.stringify(cart));
+alert(item.dataset.title+" added to cart!");
+updateCount();
+}
+
+function updateCount(){
+document.getElementById("cartCount").innerText=
+cart.reduce((a,b)=>a+b.qty,0);
+}
+
+function openModal(item){
+modal.style.display="flex";
+modalImg.src=item.dataset.img;
+modalTitle.innerText=item.dataset.title;
+modalDesc.innerText=item.dataset.desc;
+}
+
+function closeModal(){
+modal.style.display="none";
+}
+
+</script>
+
+</body>
+</html>
