@@ -1,57 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Souvenir Shop</title>
+
 <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
 
-<nav>
-<a href="../index.html">Home</a>
-<a href="collections.html">Collections</a>
-<a href="shop.html">Shop (<span id="cartCount">0</span>)</a>
-</nav>
+<header class="top-field">
+    <h1>Souvenir Shop</h1>
 
-<h1>Souvenir Shop</h1>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="collections.html">Collections</a>
+        <a href="shop.html">Shop (<span id="cartCount">0</span>)</a>
+    </nav>
+</header>
 
-<div class="shop-container">
+<main class="shop-container">
 
 <div class="souvenir-item" data-id="item001" data-title="Celestial Inkstone" data-price="14.95" data-img="../images/inkstone.jpg" data-desc="Meteoric basalt ritual platform.">
 <img src="../images/inkstone.jpg" alt="Celestial Inkstone" onclick="openModal(this.parentElement)">
 <h3>Celestial Inkstone</h3>
 <p>$14.95</p>
-<button class="main-button" onclick="addToCart(this.parentElement)">Add Celestial Inkstone to Cart</button>
+<button class="main-button" onclick="addToCart(this.parentElement)">Add to Cart</button>
 </div>
 
 <div class="souvenir-item" data-id="item002" data-title="Spiral Claw Fossil" data-price="22.95" data-img="../images/claw.jpg" data-desc="Volcanic fossil fragment.">
 <img src="../images/claw.jpg" alt="Spiral Claw Fossil" onclick="openModal(this.parentElement)">
 <h3>Spiral Claw Fossil</h3>
 <p>$22.95</p>
-<button class="main-button" onclick="addToCart(this.parentElement)">Add Spiral Claw Fossil to Cart</button>
+<button class="main-button" onclick="addToCart(this.parentElement)">Add to Cart</button>
 </div>
 
 <div class="souvenir-item" data-id="item003" data-title="Basalt Glyphstone" data-price="14.95" data-img="../images/glyph.jpg" data-desc="Invocation tablet.">
 <img src="../images/glyph.jpg" alt="Basalt Glyphstone" onclick="openModal(this.parentElement)">
 <h3>Basalt Glyphstone</h3>
 <p>$14.95</p>
-<button class="main-button" onclick="addToCart(this.parentElement)">Add Basalt Glyphstone to Cart</button>
+<button class="main-button" onclick="addToCart(this.parentElement)">Add to Cart</button>
 </div>
 
 <div class="souvenir-item" data-id="item004" data-title="Marker Arch Fragment" data-price="22.95" data-img="../images/arch.jpg" data-desc="Ceremonial stone marker.">
 <img src="../images/arch.jpg" alt="Marker Arch Fragment" onclick="openModal(this.parentElement)">
 <h3>Marker Arch Fragment</h3>
 <p>$22.95</p>
-<button class="main-button" onclick="addToCart(this.parentElement)">Add Marker Arch Fragment to Cart</button>
+<button class="main-button" onclick="addToCart(this.parentElement)">Add to Cart</button>
 </div>
 
-</div>
+</main>
 
+<div style="text-align:center;margin-bottom:30px;">
 <a href="cart.html" class="main-button">View Cart</a>
+</div>
 
 <div id="modal" class="modal">
 <div class="modal-content">
-<button onclick="closeModal()">Close</button>
+<button class="main-button" onclick="closeModal()">Close</button>
 <img id="modalImg" width="100%">
 <h3 id="modalTitle"></h3>
 <p id="modalDesc"></p>
@@ -60,43 +67,45 @@
 
 <script>
 
-let cart=JSON.parse(localStorage.getItem("cart"))||[];
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 updateCount();
 
-function addToCart(item){
-let id=item.dataset.id;
-let found=cart.find(i=>i.id===id);
+function addToCart(item) {
 
-if(found){found.qty++;}
-else{
-cart.push({
-id,
-title:item.dataset.title,
-price:item.dataset.price,
-qty:1
-});
+    let id = item.dataset.id;
+    let found = cart.find(i => i.id === id);
+
+    if (found) {
+        found.qty++;
+    } else {
+        cart.push({
+            id,
+            title: item.dataset.title,
+            price: item.dataset.price,
+            qty: 1
+        });
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert(item.dataset.title + " added to cart!");
+    updateCount();
 }
 
-localStorage.setItem("cart",JSON.stringify(cart));
-alert(item.dataset.title+" added to cart!");
-updateCount();
+function updateCount() {
+    document.getElementById("cartCount").innerText =
+        cart.reduce((a, b) => a + b.qty, 0);
 }
 
-function updateCount(){
-document.getElementById("cartCount").innerText=
-cart.reduce((a,b)=>a+b.qty,0);
+function openModal(item) {
+    modal.style.display = "flex";
+    modalImg.src = item.dataset.img;
+    modalTitle.innerText = item.dataset.title;
+    modalDesc.innerText = item.dataset.desc;
 }
 
-function openModal(item){
-modal.style.display="flex";
-modalImg.src=item.dataset.img;
-modalTitle.innerText=item.dataset.title;
-modalDesc.innerText=item.dataset.desc;
-}
-
-function closeModal(){
-modal.style.display="none";
+function closeModal() {
+    modal.style.display = "none";
 }
 
 </script>
