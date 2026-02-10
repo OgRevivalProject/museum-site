@@ -7,31 +7,40 @@ body {
     margin: 0;
 }
 
-/* Shared Buttons */
+/* ===== HEADER ===== */
 
-.main-button {
-    margin: 5px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-    background-color: #6b7c93;
-    color: #fff;
-    cursor: pointer;
+header, .top-field {
+    background-color: #445469;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
 }
 
+nav {
+    margin-top: 15px;
+}
+
+/* NAV BUTTONS */
+
+nav a,
+.main-button {
+    display: inline-block;
+    background: #6b7c93;
+    color: white;
+    padding: 12px 28px;
+    margin: 5px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: .2s ease;
+}
+
+nav a:hover,
 .main-button:hover {
-    background-color: #9aa3b2;
+    background: #9aa3b2;
 }
 
 /* ===== COLLECTIONS ===== */
-
-.top-field {
-    background-color: #4a5a70;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
 
 .collections-nav {
     text-align: center;
@@ -79,7 +88,7 @@ body {
     border-radius: 6px;
 }
 
-/* Modal */
+/* ===== MODAL ===== */
 
 .modal {
     display: none;
@@ -94,9 +103,10 @@ body {
     background: white;
     padding: 2rem;
     max-width: 600px;
+    border-radius: 10px;
 }
 
-/* Footer */
+/* ===== FOOTER ===== */
 
 .bottom-field {
     background:#22223b;
