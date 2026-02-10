@@ -1,72 +1,90 @@
-/* ===== GLOBAL ===== */
+/* ================= GLOBAL ================= */
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f5f7;
-    color: #333;
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f5f7;
+    color: #222;
 }
 
-/* ===== HEADER ===== */
+/* ================= HEADER ================= */
 
-header, .top-field {
-    background-color: #445469;
+.top-field {
+    background: #445469;
     color: white;
     padding: 40px 20px;
     text-align: center;
 }
 
-nav {
-    margin-top: 15px;
+.top-field h1 {
+    margin-bottom: 15px;
 }
 
 /* NAV BUTTONS */
 
-nav a,
-.main-button {
-    display: inline-block;
+nav button,
+nav a {
     background: #6b7c93;
     color: white;
+    border: none;
     padding: 12px 28px;
-    margin: 5px;
+    margin: 6px;
     border-radius: 25px;
-    text-decoration: none;
     font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
     transition: .2s ease;
 }
 
-nav a:hover,
-.main-button:hover {
+nav button:hover,
+nav a:hover {
     background: #9aa3b2;
 }
 
-/* ===== COLLECTIONS ===== */
+/* ================= CATEGORY BUTTONS ================= */
+
+.collections-nav button {
+    background: #6b7c93;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    margin: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.collections-nav button:hover {
+    background: #9aa3b2;
+}
+
+/* ================= COLLECTIONS ================= */
 
 .collections-nav {
     text-align: center;
-    margin: 20px 0;
+    margin: 30px 0;
 }
 
 .artifact-block {
     display: flex;
-    gap: 20px;
+    gap: 25px;
     background: white;
-    margin: 20px;
-    padding: 15px;
-    border-radius: 10px;
+    margin: 30px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.15);
 }
 
 .artifact-block img {
     width: 30%;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
 .artifact-columns {
     display: flex;
-    gap: 20px;
+    gap: 25px;
 }
 
-/* ===== SHOP ===== */
+/* ================= SHOP ================= */
 
 .shop-container {
     display: grid;
@@ -77,18 +95,18 @@ nav a:hover,
 
 .souvenir-item {
     background: white;
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,.15);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,.15);
 }
 
 .souvenir-item img {
     width: 100%;
+    border-radius: 10px;
     cursor: pointer;
-    border-radius: 6px;
 }
 
-/* ===== MODAL ===== */
+/* ================= MODAL ================= */
 
 .modal {
     display: none;
@@ -103,14 +121,14 @@ nav a:hover,
     background: white;
     padding: 2rem;
     max-width: 600px;
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
-/* ===== FOOTER ===== */
+/* ================= FOOTER ================= */
 
 .bottom-field {
-    background:#22223b;
-    color:#f2e9e4;
-    text-align:center;
-    padding:15px;
+    background: #22223b;
+    color: #f2e9e4;
+    text-align: center;
+    padding: 20px;
 }
