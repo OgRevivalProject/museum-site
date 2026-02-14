@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Shane R.">
+<meta name="robots" content="noindex, nofollow">
+<title>Shopping Cart - Museum of Cultural Memory</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<h1>Your Cart</h1>
+<div id="cartItems"></div>
+<a href="shop.html" class="main-button">Keep Shopping</a>
+<a href="checkout.html" class="main-button">Checkout</a>
+<script>
+let cart=JSON.parse(localStorage.getItem("cart"))||[];
+let div=document.getElementById("cartItems");
+cart.forEach((i,index)=>{
+div.innerHTML+=`${i.title} x${i.qty} - $${(i.price*i.qty).toFixed(2)}
+<button onclick="remove(${index})">Remove</button><br>`;
+});
+function remove(i){
+cart.splice(i,1);
+localStorage.setItem("cart",JSON.stringify(cart));
+location.reload();
+}
+</script>
+</body>
+</html>
