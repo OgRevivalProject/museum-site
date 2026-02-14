@@ -1,32 +1,25 @@
 /* ================= GLOBAL ================= */
-
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     background: #f4f5f7;
     color: #222;
 }
-
 h1,h2,h3 {
     color: #445469;
 }
-
 /* ================= HEADER ================= */
-
 .top-field {
     background: #445469;
     color: white;
     padding: 40px 20px;
     text-align: center;
 }
-
 .top-field h1 {
     margin-bottom: 15px;
     color: white;
 }
-
 /* ================= NAV BUTTONS ================= */
-
 nav button,
 nav a {
     background: #6b7c93;
@@ -40,19 +33,15 @@ nav a {
     text-decoration: none;
     transition: .2s ease;
 }
-
 nav button:hover,
 nav a:hover {
     background: #9aa3b2;
 }
-
 /* ================= COLLECTION NAV ================= */
-
 .collections-nav {
     text-align: center;
     margin: 30px 0;
 }
-
 .collections-nav button {
     background: #6b7c93;
     color: white;
@@ -62,13 +51,10 @@ nav a:hover {
     border-radius: 20px;
     cursor: pointer;
 }
-
 .collections-nav button:hover {
     background: #9aa3b2;
 }
-
 /* ================= COLLECTION CARDS ================= */
-
 .artifact-block {
     display: flex;
     gap: 25px;
@@ -78,51 +64,45 @@ nav a:hover {
     border-radius: 15px;
     box-shadow: 0 2px 8px rgba(0,0,0,.15);
 }
-
 .artifact-block img {
     width: 30%;
     border-radius: 10px;
     cursor: pointer;
+    transition: transform 0.2s ease;
 }
-
+.artifact-block img:hover {
+    transform: scale(1.02);
+}
 .artifact-info {
     width: 100%;
 }
-
 .artifact-columns {
     display: flex;
     gap: 25px;
 }
-
 .artifact-columns div {
     flex: 1;
     line-height: 1.5;
 }
-
 /* ================= SHOP ================= */
-
 .shop-container {
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
     gap: 2rem;
     padding: 2rem;
 }
-
 .souvenir-item {
     background: white;
     padding: 1.5rem;
     border-radius: 12px;
     box-shadow: 0 2px 6px rgba(0,0,0,.15);
 }
-
 .souvenir-item img {
     width: 100%;
     border-radius: 10px;
     cursor: pointer;
 }
-
 /* ================= MODAL ================= */
-
 .modal {
     display: none;
     position: fixed;
@@ -132,9 +112,8 @@ nav a:hover {
     align-items: center;
     z-index: 999;
 }
-
 .modal-content {
-    background: white;
+    background: #f5f1e8;
     padding: 2rem;
     max-width: 650px;
     max-height: 85vh;
@@ -143,18 +122,22 @@ nav a:hover {
     position: relative;
     line-height: 1.6;
 }
-
 .modal-content h2 {
     margin-top: 0;
+    color: #445469;
 }
-
+.modal-content h3 {
+    color: #445469;
+    font-size: 1rem;
+    font-weight: normal;
+    margin: 5px 0 20px 0;
+}
 .modal-content p {
     margin-bottom: 1rem;
     text-align: left;
+    color: #222;
 }
-
 /* Close Button */
-
 .close-modal {
     position: absolute;
     right: 15px;
@@ -165,51 +148,54 @@ nav a:hover {
     padding: 6px 12px;
     border-radius: 6px;
     cursor: pointer;
+    font-weight: bold;
 }
-
+.close-modal:hover {
+    background: #6b7c93;
+}
 /* ================= HISTORIES ================= */
-
 #histories {
     padding: 40px;
 }
-
 #histories img {
     max-width: 300px;
     float: left;
     margin: 0 25px 15px 0;
     border-radius: 10px;
 }
-
 #histories p {
     line-height: 1.7;
     text-align: left;
 }
-
+#histories h3 {
+    clear: none;
+    color: #445469;
+    margin-top: 20px;
+}
+#histories blockquote {
+    background: #f4f5f7;
+    padding: 15px;
+    border-left: 4px solid #445469;
+    margin: 20px 0;
+}
 /* ================= FOOTER ================= */
-
 .bottom-field {
     background: #22223b;
     color: #f2e9e4;
     text-align: center;
     padding: 20px;
 }
-
 /* ================= MOBILE ================= */
-
 @media (max-width: 900px) {
-
     .artifact-block {
         flex-direction: column;
     }
-
     .artifact-block img {
         width: 100%;
     }
-
     .artifact-columns {
         flex-direction: column;
     }
-
     #histories img {
         float: none;
         width: 100%;
