@@ -3,24 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Souvenir Shop</title>
-
+<meta name="author" content="Shane R.">
+<meta name="robots" content="noindex, nofollow">
+<title>Souvenir Shop - Museum of Cultural Memory</title>
 <link rel="stylesheet" href="../css/style.css">
 </head>
-
 <body>
-
 <header class="top-field">
     <h1>Souvenir Shop</h1>
-
     <nav>
         <a href="../index.html">Home</a>
         <a href="collections.html">Collections</a>
         <a href="shop.html">Shop (<span id="cartCount">0</span>)</a>
     </nav>
 </header>
-
 <main class="shop-container">
+
+<h2 class="sr-only">Available Souvenirs</h2>
 
 <div class="souvenir-item" data-id="item001" data-title="Celestial Inkstone" data-price="14.95" data-img="../images/inkstone.jpg" data-desc="Meteoric basalt ritual platform.">
 <img src="../images/inkstone.jpg" alt="Celestial Inkstone" onclick="openModal(this.parentElement)">
@@ -59,23 +58,18 @@
 <div id="modal" class="modal">
 <div class="modal-content">
 <button class="main-button" onclick="closeModal()">Close</button>
-<img id="modalImg" width="100%">
-<h3 id="modalTitle"></h3>
-<p id="modalDesc"></p>
+<img id="modalImg" src="" alt="Souvenir item">
+<h3 id="modalTitle">Item Details</h3>
+<p id="modalDesc">Loading...</p>
 </div>
 </div>
 
 <script>
-
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
 updateCount();
-
 function addToCart(item) {
-
     let id = item.dataset.id;
     let found = cart.find(i => i.id === id);
-
     if (found) {
         found.qty++;
     } else {
@@ -86,29 +80,24 @@ function addToCart(item) {
             qty: 1
         });
     }
-
     localStorage.setItem("cart", JSON.stringify(cart));
     alert(item.dataset.title + " added to cart!");
     updateCount();
 }
-
 function updateCount() {
     document.getElementById("cartCount").innerText =
         cart.reduce((a, b) => a + b.qty, 0);
 }
-
 function openModal(item) {
     modal.style.display = "flex";
     modalImg.src = item.dataset.img;
+    modalImg.alt = item.dataset.title;
     modalTitle.innerText = item.dataset.title;
     modalDesc.innerText = item.dataset.desc;
 }
-
 function closeModal() {
     modal.style.display = "none";
 }
-
 </script>
-
 </body>
 </html>
