@@ -137,6 +137,14 @@ nav a:hover {
     text-align: left;
     color: #222;
 }
+/* Modal Image */
+#modalImg {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
 /* Close Button */
 .close-modal {
     position: absolute;
@@ -152,6 +160,18 @@ nav a:hover {
 }
 .close-modal:hover {
     background: #6b7c93;
+}
+/* Screen reader only class for accessibility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border-width: 0;
 }
 /* ================= HISTORIES ================= */
 #histories {
