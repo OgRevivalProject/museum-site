@@ -8,216 +8,165 @@
 <title>Museum of Cultural Memory - Collections</title>
 <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body class="collections-page">
 
 <header class="top-field">
-    <h1>Museum of Cultural Memory</h1>
-    <nav class="main-nav">
-        <button type="button" onclick="location.href='../index.html'">Home</button>
-        <button type="button" onclick="location.href='staff.html'">Staff</button>
-        <button type="button" onclick="location.href='collections.html'">Collections</button>
-        <button type="button" onclick="location.href='login.html'">Login</button>
-    </nav>
+<h1>Museum of Cultural Memory</h1>
+<nav class="main-nav">
+<button onclick="location.href='../index.html'">Home</button>
+<button onclick="location.href='staff.html'">Staff</button>
+<button onclick="location.href='collections.html'">Collections</button>
+<button onclick="location.href='login.html'">Login</button>
+</nav>
 </header>
 
-<!-- Collections Sub-navigation -->
 <div class="collections-nav">
-    <button type="button" onclick="showSection('archaeology')">Archaeology</button>
-    <button type="button" onclick="showSection('anthropology')">Anthropology</button>
-    <button type="button" onclick="showSection('histories')">Histories</button>
-    <p><em>The content in this gallery was entirely created by AI under human direction. It was then curated, reviewed and edited by a human before being published.</em></p>
+<button onclick="showSection('archaeology')">Archaeology</button>
+<button onclick="showSection('anthropology')">Anthropology</button>
+<button onclick="showSection('histories')">Histories</button>
+
+<p><em>The content in this gallery was entirely created by AI under human direction. It was then curated, reviewed and edited by a human before being published.</em></p>
+
+<p><strong>Click artifact images to open interpretive modals.</strong></p>
 </div>
 
 <main>
 
-<!-- Archaeology Section -->
 <section id="archaeology" class="collection-section">
-    <h1>Archaeology</h1>
 
-    <!-- Artifact 1 -->
-    <div class="artifact-block">
-        <img src="../images/collections/marker-arch.jpg" alt="Marker Arch Fragment">
-        <div class="artifact-info">
-            <h2>Marker Arch Fragment</h2>
-            <div class="artifact-columns">
-                <div>
-                    <strong>Material:</strong> Dense composite stone (volcanic basalt, lunar silicate, fused ash)<br>
-                    <strong>Size/Weight/Shape:</strong> 2.3 m high segment; partial arc, tapering base; est. 1.4 metric tons<br>
-                    <strong>Estimated Age:</strong> ~22,000 years<br>
-                    <strong>Preservation State:</strong> Lower right third remains; inscription field partially intact
-                </div>
-                <div>
-                    <strong>Likely Purpose:</strong> Ceremonial or calendrical archway; seasonal passage marker<br>
-                    <strong>Evidence of Use:</strong> Polished threshold stone; soot traces beneath arch<br>
-                    <strong>Manufacture Clues:</strong> Precision jointing; angle-carved keystone; 7-point symbol array
-                </div>
-                <div>
-                    <strong>Found With:</strong> Burnt charcoal flecks, obsidian beads, crushed pigment<br>
-                    <strong>Burial or Habitat Context:</strong> Buried beneath basalt and sediment; ridge stabilized by stonework<br>
-                    <strong>Symbolism:</strong> Spiral and nested triangle motifs; possibly celestial alignment<br>
-                    <strong>Comparison:</strong> Similar to standing stone gates at Aetha-Zul but with finer symbolic work
-                </div>
-            </div>
-        </div>
-    </div>
+<h1>Archaeology</h1>
 
-    <!-- Artifact 2 -->
-    <div class="artifact-block">
-        <img src="../images/collections/obsidian-spearhead.jpg" alt="Obsidian Spearhead">
-        <div class="artifact-info">
-            <h2>Obsidian Spearhead</h2>
-            <div class="artifact-columns">
-                <div>
-                    <strong>Material:</strong> Volcanic glass (obsidian)<br>
-                    <strong>Size/Weight/Shape:</strong> 18 cm length; triangular cross-section; sharp point<br>
-                    <strong>Estimated Age:</strong> ~12,500 years<br>
-                    <strong>Preservation State:</strong> Fragmented tip; lateral flake scars visible
-                </div>
-                <div>
-                    <strong>Likely Purpose:</strong> Hunting weapon; ritualized object<br>
-                    <strong>Evidence of Use:</strong> Chipped edges; polish at hafting point<br>
-                    <strong>Manufacture Clues:</strong> Pressure flaking; fine retouch along edges
-                </div>
-                <div>
-                    <strong>Found With:</strong> Charred bird bones, red ochre traces<br>
-                    <strong>Burial or Habitat Context:</strong> Cave midden deposit<br>
-                    <strong>Symbolism:</strong> Possible ritual significance<br>
-                    <strong>Comparison:</strong> Similar to spearheads in nearby Aetha cave system
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="artifact-block">
+<img src="../images/collections/marker-arch.jpg" alt="Marker Arch Fragment" class="open-modal" data-modal-target="#modal-marker">
+<h2>Marker Arch Fragment</h2>
+</div>
 
-    <!-- Artifact 3 -->
-    <div class="artifact-block">
-        <img src="../images/collections/clay-vessel.jpg" alt="Clay Storage Vessel">
-        <div class="artifact-info">
-            <h2>Clay Storage Vessel</h2>
-            <div class="artifact-columns">
-                <div>
-                    <strong>Material:</strong> Fired terracotta clay<br>
-                    <strong>Size/Weight/Shape:</strong> 45 cm height; 25 cm diameter; cylindrical<br>
-                    <strong>Estimated Age:</strong> ~3,200 years<br>
-                    <strong>Preservation State:</strong> Cracks along rim; handle intact
-                </div>
-                <div>
-                    <strong>Likely Purpose:</strong> Storage of grains or liquids<br>
-                    <strong>Evidence of Use:</strong> Soot around neck; sediment residues inside<br>
-                    <strong>Manufacture Clues:</strong> Wheel-thrown; coiled base; linear incisions
-                </div>
-                <div>
-                    <strong>Found With:</strong> Grain remnants; small cup fragments<br>
-                    <strong>Burial or Habitat Context:</strong> House floor; domestic refuse pit<br>
-                    <strong>Symbolism:</strong> Linear incisions may indicate ownership or family clan<br>
-                    <strong>Comparison:</strong> Similar vessels from Bronze Age settlements nearby
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="artifact-block">
+<img src="../images/collections/obsidian-spearhead.jpg" alt="Obsidian Spearhead" class="open-modal" data-modal-target="#modal-spear">
+<h2>Obsidian Spearhead</h2>
+</div>
+
+<div class="artifact-block">
+<img src="../images/collections/clay-vessel.jpg" alt="Clay Storage Vessel" class="open-modal" data-modal-target="#modal-vessel">
+<h2>Clay Storage Vessel</h2>
+</div>
 
 </section>
 
-<!-- Anthropology Section -->
-<section id="anthropology" class="collection-section" style="display:none;">
-    <h1>Anthropology</h1>
+<section id="anthropology" class="collection-section" style="display:none">
 
-    <!-- Artifact 4 -->
-    <div class="artifact-block">
-        <img src="../images/collections/human-skull.jpg" alt="Human Skull Remains">
-        <div class="artifact-info">
-            <h2>Human Skull Remains</h2>
-            <div class="artifact-columns">
-                <div>
-                    <strong>Material:</strong> Bone<br>
-                    <strong>Size/Weight/Shape:</strong> Adult cranium; complete<br>
-                    <strong>Estimated Age:</strong> ~4,500 years<br>
-                    <strong>Preservation State:</strong> Pristine; sutures intact
-                </div>
-                <div>
-                    <strong>Likely Purpose:</strong> Burial ritual<br>
-                    <strong>Evidence of Use:</strong> No cut marks; mineral deposits on surface<br>
-                    <strong>Manufacture Clues:</strong> Natural formation; no modification
-                </div>
-                <div>
-                    <strong>Found With:</strong> Burial goods, beads, textile fragments<br>
-                    <strong>Burial or Habitat Context:</strong> Tomb chamber<br>
-                    <strong>Symbolism:</strong> Skull orientation toward sunrise<br>
-                    <strong>Comparison:</strong> Similar to nearby Bronze Age burials
-                </div>
-            </div>
-        </div>
-    </div>
+<h1>Anthropology</h1>
 
-    <!-- Artifact 5 -->
-    <div class="artifact-block">
-        <img src="../images/collections/pottery-figurine.jpg" alt="Pottery Figurine">
-        <div class="artifact-info">
-            <h2>Pottery Figurine</h2>
-            <div class="artifact-columns">
-                <div>
-                    <strong>Material:</strong> Clay with painted surface<br>
-                    <strong>Size/Weight/Shape:</strong> 12 cm height; rounded base<br>
-                    <strong>Estimated Age:</strong> ~2,100 years<br>
-                    <strong>Preservation State:</strong> Complete; minor surface chipping
-                </div>
-                <div>
-                    <strong>Likely Purpose:</strong> Ritual offering or domestic ornament<br>
-                    <strong>Evidence of Use:</strong> Finger marks on surface; pigment residues<br>
-                    <strong>Manufacture Clues:</strong> Molded with hand-painted motifs
-                </div>
-                <div>
-                    <strong>Found With:</strong> Ceremonial hearth, small tokens<br>
-                    <strong>Burial or Habitat Context:</strong> Domestic altar<br>
-                    <strong>Symbolism:</strong> Anthropomorphic representation of fertility<br>
-                    <strong>Comparison:</strong> Similar figurines in regional archaeological sites
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="artifact-block">
+<img src="../images/collections/human-skull.jpg" alt="Human Skull Remains" class="open-modal" data-modal-target="#modal-skull">
+<h2>Human Skull Remains</h2>
+</div>
 
-    <!-- Artifact 6 -->
-    <div class="artifact-block">
-        <img src="../images/collections/stone-tool.jpg" alt="Stone Tool Assemblage">
-        <div class="artifact-info">
-            <h2>Stone Tool Assemblage</h2>
-            <div class="artifact-columns">
-                <div>
-                    <strong>Material:</strong> Flint and chert<br>
-                    <strong>Size/Weight/Shape:</strong> 10–20 cm lengths; sharp edges<br>
-                    <strong>Estimated Age:</strong> ~6,000 years<br>
-                    <strong>Preservation State:</strong> Pristine; edges intact
-                </div>
-                <div>
-                    <strong>Likely Purpose:</strong> Cutting, scraping, or ceremonial uses<br>
-                    <strong>Evidence of Use:</strong> Polishing along edges; residues<br>
-                    <strong>Manufacture Clues:</strong> Pressure flaking; micro-chipping
-                </div>
-                <div>
-                    <strong>Found With:</strong> Animal bones, charred plant remains<br>
-                    <strong>Burial or Habitat Context:</strong> Domestic midden<br>
-                    <strong>Symbolism:</strong> N/A<br>
-                    <strong>Comparison:</strong> Similar to tools in nearby ethnographic collections
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="artifact-block">
+<img src="../images/collections/pottery-figurine.jpg" alt="Pottery Figurine" class="open-modal" data-modal-target="#modal-figurine">
+<h2>Pottery Figurine</h2>
+</div>
+
+<div class="artifact-block">
+<img src="../images/collections/stone-tool.jpg" alt="Stone Tool Assemblage" class="open-modal" data-modal-target="#modal-tool">
+<h2>Stone Tool Assemblage</h2>
+</div>
+
+</section>
+
+<section id="histories" class="collection-section histories" style="display:none">
+
+<h1>Histories</h1>
+
+<p>Each artifact below includes an expanded museum-style exhibit label.</p>
+
+<img src="../images/collections/human-skull.jpg" alt="Human Skull">
+<h2>Human Skull Remains — Exhibit Label</h2>
+
+<p>
+Recovered from a formal tomb chamber and accompanied by burial goods, beads, and textile fragments, these human skull remains date to approximately 4,500 years before present. The adult cranium is complete and exceptionally preserved, with clearly visible sutures and smooth external surfaces showing light mineral deposition. No cut marks or trauma are present, indicating respectful interment rather than violent death or post-mortem modification.
+</p>
+
+<p>
+The skull’s deliberate orientation toward the sunrise suggests ritualized placement connected to beliefs about renewal, ancestry, and cosmological cycles. Associated grave offerings demonstrate structured mortuary practices emphasizing symbolic care for the deceased. Comparable Bronze Age burials across the region reflect shared traditions involving personal adornment, ceremonial placement, and tomb construction.
+</p>
+
+<p>
+From a bioarchaeological perspective, preservation quality allows assessment of age-at-death and skeletal integrity while emphasizing ethical stewardship. These remains are interpreted through culturally informed mortuary analysis, acknowledging uncertainty and prioritizing respectful representation. This burial reflects how communities expressed identity, memory, and continuity through ritual treatment of ancestors.
+</p>
+
+<p>
+Comparative regional mortuary studies indicate this individual participated in a broader ceremonial system emphasizing collective remembrance. Consultation frameworks guide museum handling and display, reinforcing descendant-centered ethics. 
+</p>
+
+<p>
+Cautionary Note: Interpretations are grounded in physical evidence and burial context. Original beliefs remain unknown.
+</p>
 
 </section>
 
 </main>
 
+<!-- Hidden Modal Content -->
+
+<div hidden id="modal-skull" class="modal-item">
+<h2>Human Skull Remains</h2>
+<p><strong>Material:</strong> Bone</p>
+<p><strong>Location Found:</strong> Tomb chamber with beads and textile fragments</p>
+
+<p>
+This complete adult cranium dates to approximately 4,500 years ago and represents a carefully conducted funerary burial. The skull shows pristine preservation with intact sutures and smooth surfaces, indicating minimal post-depositional disturbance. Light mineral deposition reflects long-term sediment contact rather than environmental damage.
+</p>
+
+<p>
+The absence of cut marks or trauma supports interpretation of peaceful death followed by ceremonial interment. Associated grave goods and the skull’s orientation toward sunrise suggest ritualized treatment reflecting beliefs in renewal, ancestry, and cosmological order. Comparable Bronze Age burials nearby demonstrate consistent regional mortuary traditions emphasizing respectful placement and symbolic offerings.
+</p>
+
+<p>
+Viewed through ethical bioarchaeology, these remains are presented with care and cultural sensitivity. While skeletal analysis provides insight into burial practice and community values, original spiritual meanings remain unknown. This artifact invites reflection on how ancient societies honored their dead and expressed collective identity through ceremonial burial.
+</p>
+
+<p><em>Caution: Interpretations are evidence-based and provisional.</em></p>
+</div>
+
+<!-- Modal Shell -->
+
+<div class="modal" id="modal">
+<div class="modal-content">
+<button class="close-modal">X</button>
+<div id="modal-body"></div>
+</div>
+</div>
+
 <footer class="bottom-field">
-    <p>This is a fictitious website created purely for academic purposes.</p>
-    <p>The content and images on this site were created using AI assistance and curated by a human.</p>
+<p>This is a fictitious academic museum.</p>
 </footer>
 
-<!-- JS to show/hide sections -->
 <script>
-function showSection(section) {
-    const sections = document.querySelectorAll('.collection-section');
-    sections.forEach(s => s.style.display = 'none');
-    document.getElementById(section).style.display = 'block';
+function showSection(id){
+document.querySelectorAll('.collection-section').forEach(s=>s.style.display='none');
+document.getElementById(id).style.display='block';
 }
+
+(function(){
+const modal=document.getElementById('modal');
+const body=document.getElementById('modal-body');
+const close=document.querySelector('.close-modal');
+
+document.addEventListener('click',e=>{
+const t=e.target.closest('[data-modal-target]');
+if(t){
+body.innerHTML=document.querySelector(t.dataset.modalTarget).innerHTML;
+modal.style.display='block';
+}
+if(e.target===modal||e.target===close){
+modal.style.display='none';
+body.innerHTML='';
+}
+});
+
+})();
 </script>
 
 </body>
