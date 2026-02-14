@@ -27,10 +27,6 @@ h1,h2,h3 {
 
 /* ================= NAV BUTTONS ================= */
 
-nav {
-    text-align: center;
-}
-
 nav button,
 nav a {
     background: #6b7c93;
@@ -50,56 +46,28 @@ nav a:hover {
     background: #9aa3b2;
 }
 
-/* ================= FILTER BUTTONS ================= */
+/* ================= COLLECTION NAV ================= */
 
-.filter-buttons {
+.collections-nav {
     text-align: center;
-    margin: 25px;
+    margin: 30px 0;
 }
 
-.filter-buttons button {
+.collections-nav button {
     background: #6b7c93;
     color: white;
     border: none;
-    padding: 10px 22px;
-    margin: 6px;
+    padding: 10px 24px;
+    margin: 5px;
     border-radius: 20px;
     cursor: pointer;
 }
 
-.filter-buttons button:hover {
+.collections-nav button:hover {
     background: #9aa3b2;
 }
 
-.subtitle {
-    text-align: center;
-    font-style: italic;
-}
-
-/* ================= COLLECTION GRID ================= */
-
-.collection-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    gap: 30px;
-    padding: 30px;
-}
-
-.artifact-card {
-    background: white;
-    padding: 15px;
-    border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(0,0,0,.15);
-    cursor: pointer;
-    text-align: center;
-}
-
-.artifact-card img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-/* ================= OLD ARTIFACT BLOCK ================= */
+/* ================= COLLECTION CARDS ================= */
 
 .artifact-block {
     display: flex;
@@ -166,7 +134,7 @@ nav a:hover {
 }
 
 .modal-content {
-    background: #efe3d3;
+    background: white;
     padding: 2rem;
     max-width: 650px;
     max-height: 85vh;
@@ -180,30 +148,23 @@ nav a:hover {
     margin-top: 0;
 }
 
-.modal-meta {
-    color: #555;
-    margin-bottom: 15px;
-}
-
-.section-title {
-    margin-top: 20px;
-    font-weight: bold;
+.modal-content p {
+    margin-bottom: 1rem;
+    text-align: left;
 }
 
 /* Close Button */
 
-.close,
 .close-modal {
     position: absolute;
-    right: 20px;
-    top: 15px;
-    cursor: pointer;
-    font-weight: bold;
+    right: 15px;
+    top: 10px;
     background: #445469;
     color: white;
     border: none;
     padding: 6px 12px;
     border-radius: 6px;
+    cursor: pointer;
 }
 
 /* ================= HISTORIES ================= */
@@ -222,14 +183,6 @@ nav a:hover {
 #histories p {
     line-height: 1.7;
     text-align: left;
-}
-
-/* ================= LINKS ================= */
-
-.back-link {
-    display: block;
-    text-align: center;
-    margin: 30px;
 }
 
 /* ================= FOOTER ================= */
